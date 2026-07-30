@@ -37,6 +37,28 @@ text = "My roll number is 45 and my age is 21"
 res = re.findall(r"\d+", text)
 print("All numbers found:", res)
 
+
+#RE to extract email
 text = "Contact: shashankva05@gmail.com"
 email = re.findall(r"\S+@\S+", text)
 print("Email Found:", email)
+
+
+#RE for checking valid number
+mobile = "7022742719"
+if re.fullmatch(r"\d{10}", mobile):
+    print("Valid mobile number.")
+
+
+
+#RE to print all words
+text = "Python Java C++"
+words = re.findall(r"\w+", text)
+print("All words found:", words)
+
+
+
+#RE to check valid date format
+date = "18/07/2005"
+if re.fullmatch(r"\d{2}/\d{2}/\d{4}", date):
+    print("Valid date format.")
