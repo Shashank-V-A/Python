@@ -24,3 +24,19 @@ print("All occurances of 'at': ", res)
 text = "I like python programming"
 res = re.sub("python", "Java", text)
 print("After Substitution:", res)
+
+
+#RE Split
+data = "I am Shashank from MVJCE:Currently in my 7th sem"
+res = re.split("[:,]", data)
+print("After Splitting:", res)
+
+
+#RE Digit Pattern
+text = "My roll number is 45 and my age is 21"
+res = re.findall(r"\d+", text)
+print("All numbers found:", res)
+
+text = "Contact: shashankva05@gmail.com"
+email = re.findall(r"\S+@\S+", text)
+print("Email Found:", email)
