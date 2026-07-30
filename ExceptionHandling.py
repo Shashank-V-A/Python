@@ -95,3 +95,85 @@ except TypeError:
 
 
 age = int(input("Enter Age:"))
+if age < 18:
+    raise Exception("Not eligible")
+print("Eligible")
+
+
+
+
+correct_password = "Pythin123"
+try:
+    password = input("Enter password: ")
+    if password != correct_password:
+        raise ValueError("Wrong Password")
+    print("Login Successful")
+except ValueError as e:
+    print(e)
+
+
+
+balance = 5000
+try:
+    amount = int(input("Enter amount:"))
+    if amount > balance:
+        raise ValueError("Insufficient Balance")
+    balance -= amount
+    print("remaining balance =", balance)
+except ValueError as e:
+    print(e)
+
+
+
+try:
+    marks = int(input("Enter Marks:"))
+    if marks < 0 or marks > 100:
+        raise ValueError("Marks must be between 0 and 100")
+    print("Valid Marks")
+except ValueError as e:
+    print(e)
+
+
+
+try:
+    a = int(input())
+    try:
+        b = int(input())
+        print(a / b)
+    except ZeroDivisionError:
+        print("Division by zero")
+except ValueError:
+    print("Invalid Input")
+
+
+
+try:
+    a = int(input())
+    b = int(input())
+    print(a / b)
+except Exception as e:
+    print("Error:", e)
+
+
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print("1.Add")
+    print("2.Sub")
+    print("3.Mul")
+    print("4.Div")
+    choice = int(input("Choice: "))
+    if choice == 1:
+        print(a + b)
+    elif choice == 2:
+        print(a - b)
+    elif choice == 3:
+        print(a * b)
+    elif choice == 4:
+        print(a / b)
+    else:
+        print("Invalid Choice")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except ValueError:
+    print("Invalid Input")
