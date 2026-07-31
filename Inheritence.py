@@ -3,11 +3,12 @@ class RBI:
         print("Define interest rate as per your policy")
 
 class SBI(RBI):
-    def interest_rate(self):
+    def deposit(self):
         print("SBI Interest Rate is 5%")
 
-class ICICI(SBI):
-    def interest_rate(self):
-        print("Rate of interest is 6%")
-i = ICICI()
+class SBIHYDERABAD(SBI):
+   def deposit(self):
+       print("Deposit miney in SBI Hyderabad")
+
+i = SBIHYDERABAD()
 i.interest_rate()
