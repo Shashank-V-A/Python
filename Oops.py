@@ -32,3 +32,25 @@ print(s2.college)
 Student.college = "IISC"
 print(s1.college)
 print(s2.college)
+
+
+
+#Program 4
+class Student:
+    college = "MVJCE"
+    def __init__(self, name):
+        self.name = name
+    
+    @classmethod
+    def changeCollege(cls, newCollege):
+        cls.college = newCollege
+
+    @staticmethod
+    def greet():
+        print("GM")
+
+s = Student("Shashank")
+print(Student.college)
+Student.changeCollege("IISC")
+print(Student.college)
+Student.greet()
