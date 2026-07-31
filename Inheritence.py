@@ -6,9 +6,20 @@ class SBI(RBI):
     def deposit(self):
         print("SBI Interest Rate is 5%")
 
-class SBIHYDERABAD(SBI):
+class ICICI(RBI):
    def deposit(self):
        print("Deposit miney in SBI Hyderabad")
 
-i = SBIHYDERABAD()
+class HDFC(RBI):
+    def interest_rate(self):
+        print("HDFC Interest Rate is 8%")
+
+s = SBI()
+s.interest_rate()
+
+i = ICICI()
 i.interest_rate()
+
+h = HDFC()
+h.interest_rate()
+
